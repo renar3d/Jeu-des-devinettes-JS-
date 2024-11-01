@@ -8,9 +8,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-info">
-    <div>
+    <div class="text-center p-5">
         <h1>Jeu des devinettes - Trouve le nombre !</h1>
-        <p>Trouve le nombre choisi entre 1 et 100</p>
+        
+        <p>Trouve le nombre choisi entre <strong>1 et 250</strong>, le plus rapidement possible !</p>
+        <p id="message"></p>
+        
+        <label for="nombre">Entrez un nombre :</label>
+        <input type="number" id="nombre" min="1" max="250">
+        
+        <button type="button" class="btn btn-secondary btn-lg" id="btn_valider" onclick="verifierValeur()">Valider</button>
+        <button type="button" class="btn btn-secondary btn-lg" id="btn_rejouer" onclick="rejouer()" disabled>Rejouer</button>
+        
+        <p id="resultat"></p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Partie</th>
+                    <th>Nombre de tentatives</th>
+                    <th>Nombre à trouver</th>
+                </tr>
+            </thead>
+            <tbody id="ajout_ligne">
+            </tbody>
+        </table>
     </div>
 <script src="script.js"></script>
 </body>
